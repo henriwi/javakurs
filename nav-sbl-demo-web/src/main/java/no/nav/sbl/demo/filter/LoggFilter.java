@@ -21,7 +21,7 @@ public class LoggFilter implements Filter {
     }
 
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
-        String requestString = String.format("%s, %s, %s", req.getRemoteAddr(), req.getRemoteHost(), req.getRemotePort());
+        String requestString = String.format("%s:%s", req.getRemoteAddr(), req.getRemotePort());
         logger.info("REQUEST FROM: {}", requestString);
         chain.doFilter(req, resp);
     }
