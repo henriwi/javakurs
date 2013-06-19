@@ -9,10 +9,9 @@ Utfør følgende kommandoer:
 
 
 	git clone git@github.com:henriwi/javakurs.git
-	cd nav-demo
+	cd javakurs
 	mvn clean install
-
-Legg nav-sbl-demo-web-1.0-SNAPSHOT.war i mappen ${jetty_home}/webapps
+	cp nav-sbl-demo-web/target/nav-sbl-demo-web-1.0-SNAPSHOT.war ${jetty_home}/webapps/.
 
 Start jetty: 
 	
