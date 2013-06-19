@@ -19,7 +19,7 @@ public class IndexPageTest extends PageTestSuper {
     }
 
     @Test
-    public void sideViserNavnKorrekt() {
+    public void viserKorrektNavn() {
         tester.startPage(IndexPage.class);
         tester.assertLabel("navnelistePanel:navneliste:0:navn", "Ole");
     }

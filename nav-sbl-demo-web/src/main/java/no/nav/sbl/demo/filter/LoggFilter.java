@@ -20,10 +20,10 @@ public class LoggFilter implements Filter {
 
     }
 
-    public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
-        String requestString = String.format("%s:%s", req.getRemoteAddr(), req.getRemotePort());
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, IOException {
+        String requestString = String.format("%s:%s", request.getRemoteAddr(), request.getRemotePort());
         logger.info("REQUEST FROM: {}", requestString);
-        chain.doFilter(req, resp);
+        chain.doFilter(request, response);
     }
 
     public void init(FilterConfig config) throws ServletException {
