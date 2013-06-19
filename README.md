@@ -21,4 +21,4 @@ Gå til http://localhost:8080/nav-demo
 
 Åpne prosjektet i IDEA:
 
-	File -> Open -> nav-demo/pom.xml
+	File -> Open -> javakurs/pom.xml
