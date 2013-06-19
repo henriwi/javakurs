@@ -31,6 +31,10 @@ Bruke service-klassen som du lagde i stad og vis dataene i pagen.
 
 Lag et Panel som pagen bruker.
 
+Lag tester for sidene
+
+> Bruk WicketTester. Må generere applikasjonskontekst vha. ApplicationContextMock.
+
 Andre oppgaver
 ==========
 > Lag flere maven moduler (f.eks. en egen service-module)
