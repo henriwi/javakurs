@@ -33,9 +33,7 @@ Lag et Panel som pagen bruker.
 
 Andre oppgaver
 ==========
-> Utvid applikasjonen
-
-> Lag flere maven moduler
+> Lag flere maven moduler (f.eks. en egen service-module)
 
 > Konfigurer Spring med XML istedenfor annotasjoner
 
