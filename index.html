@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Javakurs</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400|Dosis:300,400|Source+Code+Pro:200,300,400,400bold|Vollkorn:400italic' rel='stylesheet' type='text/css'>
+    <style type="text/css" media="screen">
+        h1, h2, h3 { font-family: 'Dosis', sans-serif; }
+        h1 { font-weight: 300; font-size: 50px; }
+        p, li { font-family: 'Source Sans Pro', sans-serif; font-weight: 300; font-size: 25px; }
+        code { font-family: 'Source Code Pro', sans-serif !important; }
+        a { color: #000; text-decoration: none;}
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Hands on
+
+---
+
+class: center, middle
+# http://github.com/henriwi/javakurs
+
+---
+
+Last ned og bygg prosjektet
+
+  ```github
+  git clone git@github.com:henriwi/javakurs.git
+  cd javakurs
+  mvn clean install
+  cp nav-sbl-demo-web/target/nav-sbl-demo-web-1.0-SNAPSHOT.war \
+    ${jetty_home}/webapps/.
+  ```
+
+Start jetty
+
+  ```github
+    java -jar ${jetty_home}/start.jar
+  ```
+  Gå til http://localhost:8080/nav-demo
+
+
+Åpne prosjektet i IDEA
+  
+  ```github
+  File -> Open -> javakurs/pom.xml
+  ```
+
+---
+
+# Filter
+Lag et eget Filter som for hver request logger f.eks. IP og port.
+
+> *Husk å konfigurere opp filteret i web.xml*
+
+---
+
+# Spring
+Sett opp Spring og konfigurer en applikasjonskontekst. Bruk annotasjoner.
+
+> *Husk å definer nødvendige avhengigheter og nødvendig konfigurasjon i web.xml*
+
+Lag deretter en service-klasse som returnerer noe og bruk denne i servlet-klassen.
+
+---
+
+# Wicket
+
+Sett opp Wicket
+
+> *Husk nødvendige avhengigheter og konfigurasjon i web.xml*
+
+Lag en Page som viser en label.
+
+Bruke service-klassen som du lagde i stad og rendre dataene (f.eks. som en liste eller tabell).
+
+Lag et Panel som pagen bruker.
+
+Lag tester for sidene
+
+> *Bruk WicketTester. Må generere applikasjonskontekst vha. ApplicationContextMock.*
+
+---
+
+# Ferdig?
+
+Lag flere maven moduler (f.eks. en egen service-module)
+
+Konfigurer Spring med XML istedenfor annotasjoner
+
+Utvid web-grensesnittet (lag et skjema og vis dataene som er lagret)
+
+Egne ideer
+
+
+    </textarea>
+    <script src="http://gnab.github.io/remark/downloads/remark-0.5.0.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
