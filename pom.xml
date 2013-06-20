@@ -89,6 +89,12 @@
                 <version>${wicket.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.jsoup</groupId>
+                <artifactId>jsoup</artifactId>
+                <version>1.7.2</version>
+            </dependency>
+
             <!-- Test -->
             <dependency>
                 <groupId>junit</groupId>
