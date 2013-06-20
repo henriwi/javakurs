@@ -58,8 +58,7 @@ public class DecoratorFilter implements Filter{
     public void destroy() {
     }
 
-    static class WicketResponseWrapper
-            extends HttpServletResponseWrapper {
+    class WicketResponseWrapper extends HttpServletResponseWrapper {
 
         private PrintWriter pw;
         private CharArrayWriter writer = new CharArrayWriter();
