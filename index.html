@@ -5,8 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400|Dosis:300,400|Source+Code+Pro:200,300,400,400bold|Vollkorn:400italic' rel='stylesheet' type='text/css'>
     <style type="text/css" media="screen">
-        h1, h2, h3 { font-family: 'Dosis', sans-serif; }
-        h1 { font-weight: 300; font-size: 50px; }
+        h1, h2, h3 { font-family: 'Dosis', sans-serif; font-weight: 300}
+        h1 { font-size: 50px; }
+        h2 { font-size: 40px; }
         p, li { font-family: 'Source Sans Pro', sans-serif; font-weight: 300; font-size: 25px; }
         code { font-family: 'Source Code Pro', sans-serif !important; }
         a { color: #000; text-decoration: none; }
@@ -27,9 +28,19 @@ class: center, middle
 
 ---
 
-Installer Jetty
+class: center, middle
 
->  http://download.eclipse.org/jetty/stable-9/dist/
+## Installer Jetty
+
+http://download.eclipse.org/jetty/stable-9/dist/
+
+## Installer Git (evt. last ned zip-fil fra repo)
+
+http://git-scm.com/download/
+
+---
+
+class: middle
 
 Last ned og bygg prosjektet
 
@@ -48,7 +59,6 @@ Start jetty
   ```
   Gå til http://localhost:8080/nav-demo
 
-
 Åpne prosjektet i IDEA
   
   ```
@@ -57,21 +67,25 @@ Start jetty
 
 ---
 
+class: middle
+
 # Filter
-Lag et eget Filter som for hver request logger f.eks. IP og port.
+Lag et eget filter som logger f.eks. IP og port for hver request.
 
 > *Husk å konfigurere opp filteret i web.xml*
 
 ---
+class: middle
 
 # Spring
 Sett opp Spring og konfigurer en applikasjonskontekst. Bruk annotasjoner.
 
 > *Husk å definer nødvendige avhengigheter og nødvendig konfigurasjon i web.xml*
 
-Lag deretter en service-klasse som returnerer noe og bruk denne i servlet-klassen.
+Lag deretter en service-klasse som returnerer noe (f.eks. en liste med navn) og bruk denne i servlet-klassen.
 
 ---
+class: middle
 
 # Wicket
 
@@ -90,6 +104,7 @@ Lag tester for sidene
 > *Bruk WicketTester. Må generere applikasjonskontekst vha. ApplicationContextMock.*
 
 ---
+class: middle
 
 # Ferdig?
 
@@ -99,7 +114,20 @@ Konfigurer Spring med XML istedenfor annotasjoner
 
 Utvid web-grensesnittet (lag et skjema og vis dataene som du skriver inn)
 
+Innfør et loggrammeverk (logback) og logg meldingene i filteret du skrev tidligere til en fil
+
 Egne ideer
+
+---
+class: middle
+
+# Ressurser
+
+http://maven.apache.org/guides/
+
+http://static.springsource.org/spring/docs/current/spring-framework-reference/html/
+
+http://wicket.apache.org/
 
 
     </textarea>
